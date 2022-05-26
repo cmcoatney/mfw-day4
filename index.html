@@ -5,21 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-    crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
     />
+    <!-- stylesheet placed after bootstrap can extend/override its classes -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>TODO: Set up containers!</h1>
+    <h1>Grid Overview</h1>
 
+    <h2>Equal Width & Auto Layout</h2>
+    <!-- pyramid 1 col, 2 cols, 3 cols, 4 cols-->
 
+    <div class="container">
+      <div class="row">
+        <div class="col border">.col</div>
+      </div>
+      <div class="row">
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+      <div class="row">
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+      <div class="row">
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+    </div>
 
-    <!--  .container>(.content>h2+lorem)*8 -->
+    <h2>One Set-Width Column Per Row</h2>
+    <!--Set one col with size in each row-->
 
+    <div class="container">
+      <div class="row">
+        <div class="col-7 border">.col-7</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+      <div class="row">
+        <div class="col-3 border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+    </div>
 
+    <h2>Auto Width Column</h2>
+    <!--Set some col-auto columns-->
+
+    .content>(.row>(.col.border)*3)*2
+
+    <div class="container">
+      <div class="row">
+        <div class="col border">.col</div>
+        <div class="col-auto border">.col-auto</div>
+        <div class="col border">.col</div>
+      </div>
+      <div class="row">
+        <div class="col border">.col</div>
+        <div class="col-auto border">.col-auto</div>
+        <div class="col-2 border">.col-2</div>
+      </div>
+    </div>
+
+    <h2>Responsive Columns</h2>
+    <p>Setting width across all breakpoints...</p>
+
+    <div class="container">
+      <div class="row">
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+      <div class="row">
+        <div class="col-6 border">.col</div>
+        <div class="col-3 border">.col</div>
+        <div class="col-3 border">.col</div>
+      </div>
+    </div>
+
+    <h2>Responsive Columns @ Specific Breakpoints</h2>
+    <p>Using device breakpoints/infixes to make columns responsive</p>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 border">
+          col-12 col-md-6 col-lg-3
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 border">
+          col-12 col-md-6 col-lg-3
+        </div>
+        <div class="col-md-6 col-lg-3 border">col-md-6 col-lg-3</div>
+        <div class="col-md-6 col-lg-3 border">col-md-6 col-lg-3</div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-sm-4 border">col-6 col-sm-4</div>
+        <div class="col-6 col-sm-4 border">col-6 col-sm-4</div>
+        <div class="col-12 col-sm-4 border">col-12 col-sm-4</div>
+      </div>
+    </div>
+
+    <h2>Row Columns</h2>
+    <p>Setting widths on parent element</p>
+
+    <p>Auto</p>
+    <div class="container">
+      <div class="row row-cols-auto">
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+    </div>
+    <p>4</p>
+    <div class="container">
+      <div class="row row-cols-4">
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+    </div>
+
+    <p>3</p>
+    <div class="container">
+      <div class="row row-cols-3">
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+    </div>
+
+    <p>2</p>
+    <div class="container">
+      <div class="row row-cols-2">
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+    </div>
+
+    <p>Responsive</p>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="col border">Columns</div>
+        <div class="col border">Columns</div>
+        <div class="col border">Columns</div>
+        <div class="col border">Columns</div>
+      </div>
+    </div>
+  
+    <h2>Nesting Grids</h2>
+    <p>Putting it all together</p>
+
+    <div class="container">
+      <div class="row">
+        <div class="col head">Content</div>
+        <div class="col head"></div>
+        <div class="col head"></div>
+        <div class="col head">Content</div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-4 border">Content</div>
+        <div class="col-12 col-sm-8 tall border">
+          <div class="container">
+            <div class="row row-cols-sm-12 third one">
+              <div class="col">Content</div>
+              <div class="col">Content</div>
+            </div>
+            <div class="row third two">
+              <div class="col">Content</div>
+              <div class="col">Content</div>
+            </div>
+            <div class="row third three">
+              <div class="col">Content</div>
+              <div class="col">Content</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1">
+        <div class="container">
+          <div class="row">
+            <div class="col">Footer</div>
+            <div class="col">Footer</div>
+            <div class="col">Footer</div>
+            <div class="col">Footer</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

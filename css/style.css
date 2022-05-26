@@ -1,8 +1,44 @@
+/* Place this stylesheet linked AFTER the bootstrap to override its classes */
+
 [class*="col"] {
-  background-color: #0d6efd !important;
+  background-color: #0d6efd;
   color: white;
 }
 
-.row{
-    background-color: white !important;
+.row {
+  background-color: white;
+}
+
+[class*="container"] {
+  margin-bottom: 5rem;
+}
+
+h2 {
+  color: gray;
+}
+
+.tall {
+  height: 600px;
+}
+
+.third {
+  height: 200px;
+}
+
+.one .col {
+  background-color: teal;
+}
+
+.two .col {
+  background-color: aqua;
+}
+
+.three .col {
+  background-color: skyblue;
+}
+
+.head {
+  height: 4rem;
+  background-color:  gray;
+  
 }
